@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function Features() {
   return (
-    <div className="overflow-hidden container gap-8 flex justify-center bg-[#FAFAFA] w-full">
+    <div className="z-50 relative overflow-hidden container gap-8 flex justify-center bg-[#FAFAFA] w-full pb-32">
       <div className="flex flex-col justify-center">
           <span className="text-4xl max-w-[30rem] font-semibold text-gray-800">
             Build a website and start selling instantly <br /> No coding required.
