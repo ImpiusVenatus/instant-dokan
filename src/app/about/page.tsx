@@ -72,10 +72,10 @@ const AboutPage = () => {
       <section className="testimonials mb-8">
         <h2 className="text-3xl font-bold mb-4">What Our Customers Say</h2>
         <blockquote className="border-l-4 border-teal-500 pl-4 mb-4">
-          "Instant Dokan has transformed our business. Their platform is easy to use, and their support is outstanding." - Sarah, Business Owner
+          &quot;Instant Dokan has transformed our business. Their platform is easy to use, and their support is outstanding.&quot; - Sarah, Business Owner
         </blockquote>
         <blockquote className="border-l-4 border-teal-500 pl-4 mb-4">
-          "We saw a 50% increase in sales after switching to Instant Dokan. Highly recommend!" - Mark, Retailer
+          &quot;We saw a 50% increase in sales after switching to Instant Dokan. Highly recommend!&quot; - Mark, Retailer
         </blockquote>
       </section>
 
@@ -86,7 +86,7 @@ const AboutPage = () => {
 
       <section className="contact mb-8">
         <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
-        <p>We'd love to hear from you! Reach out to us at:</p>
+        <p>We&apos;d love to hear from you! Reach out to us at:</p>
         <ul className="list-disc list-inside">
           <li>Email: support@instantdokan.com</li>
           <li>Phone: (123) 456-7890</li>
@@ -96,7 +96,7 @@ const AboutPage = () => {
 
       <section className="careers mb-8">
         <h2 className="text-3xl font-bold mb-4">Join Our Team</h2>
-        <p>We're always looking for talented individuals to join our growing team. Check out our <a href="#" className="text-teal-500">Careers Page</a> for current openings.</p>
+        <p>We&apos;re always looking for talented individuals to join our growing team. Check out our <a href="#" className="text-teal-500">Careers Page</a> for current openings.</p>
       </section>
       </div>
       <Footer />
