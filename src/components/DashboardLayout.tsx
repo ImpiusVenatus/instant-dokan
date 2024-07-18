@@ -17,7 +17,7 @@ const Layout = ({ children }: LayoutProps) => {
   };
 
   return (
-    <div className="flex !bg-[#778089]">
+    <div className="flex !bg-[#616770]">
       <Sidebar isOpen={isSidebarOpen} />
       <motion.div
         initial={{ marginLeft: '0px' }}
@@ -49,7 +49,7 @@ const Layout = ({ children }: LayoutProps) => {
             <Avatar alt="Remy Sharp" src="/sadman.jpeg" className='hover:cursor-pointer' />
           </div>
         </div>
-        <div className="flex-grow px-4 bg-[#778089] transition-all duration-500 overflow-auto custom-scrollbar" style={{ height: 'calc(100vh - 250px)', marginTop: '10px' }}>
+        <div className="flex-grow px-4 bg-[#616770] transition-all duration-500 overflow-auto custom-scrollbar" style={{ height: 'calc(100vh - 250px)', marginTop: '10px' }}>
           <div className='custom-scrollbar overflow-auto'>
           {children}
           </div>

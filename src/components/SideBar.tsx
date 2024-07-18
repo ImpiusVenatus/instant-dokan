@@ -1,9 +1,8 @@
-// components/Sidebar.tsx
 import React, { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { ChevronDown, Calendar, Clipboard, LayoutDashboard, MessageCircle, ShoppingCart } from 'lucide-react';
+import { ChevronDown, LayoutDashboard, ShoppingCart, Settings } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -35,12 +34,8 @@ const Sidebar = ({ isOpen }: SidebarProps) => {
         return 'Products';
       case '/ecommerce/customers':
         return 'Customers';
-      case '/calendar':
-        return 'Calendar';
-      case '/chat':
-        return 'Chat';
-      case '/tasks':
-        return 'Tasks';
+      case '/settings':
+        return 'Settings';
       default:
         return '';
     }
@@ -116,21 +111,9 @@ const Sidebar = ({ isOpen }: SidebarProps) => {
         </li>
         <li 
           className={`hover:bg-gray-700 p-2 rounded-md cursor-pointer flex items-center gap-2 ${activeItem === 'Calendar' ? 'bg-gray-700' : ''}`}
-          onClick={() => handleItemClick('/calendar')}
+          onClick={() => handleItemClick('/settings')}
         >
-          <Calendar /> Calendar
-        </li>
-        <li 
-          className={`hover:bg-gray-700 p-2 rounded-md cursor-pointer flex items-center gap-2 ${activeItem === 'Chat' ? 'bg-gray-700' : ''}`}
-          onClick={() => handleItemClick('/chat')}
-        >
-          <MessageCircle /> Chat
-        </li>
-        <li 
-          className={`hover:bg-gray-700 p-2 rounded-md cursor-pointer flex items-center gap-2 ${activeItem === 'Tasks' ? 'bg-gray-700' : ''}`}
-          onClick={() => handleItemClick('/tasks')}
-        >
-          <Clipboard /> Tasks
+          <Settings /> Settings
         </li>
       </ul>
     </motion.div>

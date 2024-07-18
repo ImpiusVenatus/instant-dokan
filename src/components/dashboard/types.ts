@@ -1,4 +1,5 @@
 export interface Order {
+    id: number;
     productTitle: string;
     productLink: string;
     price: number;
@@ -14,4 +15,3 @@ export interface Order {
     website: string;
     orders: Order[];
   }
-  

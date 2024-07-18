@@ -21,7 +21,7 @@ const ProductsDashboard = () => {
 
   return (
     <Layout>
-      <div className="flex-grow p-6 bg-[#1A1D1F] transition-all duration-500 rounded-xl">
+      <div className="flex-grow p-6 mb-4 bg-[#1A1D1F] transition-all duration-500 rounded-xl">
         {/* Buttons and title */}
         <div className="flex justify-between items-center">
           <h2 className="text-gray-300 text-3xl font-semibold">Products</h2>
