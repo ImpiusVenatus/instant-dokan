@@ -50,7 +50,7 @@ const Sidebar = ({ isOpen }: SidebarProps) => {
       initial={{ x: '-100%' }}
       animate={{ x: isOpen ? 0 : '-100%' }}
       transition={{ duration: 0.5 }}
-      className="bg-[#1A1D1F] text-gray-300 py-8 md:w-[250px] w-[200px] min-h-screen fixed z-50 rounded-xl m-2"
+      className="bg-[#FDFDFC] text-gray-800 py-8 md:w-[250px] w-[200px] min-h-screen fixed z-50"
     >
       <div className='flex justify-center mb-8'>
         <Image 
@@ -63,14 +63,14 @@ const Sidebar = ({ isOpen }: SidebarProps) => {
       </div>
       <ul className="space-y-4 px-4">
         <li 
-          className={`hover:bg-gray-700 p-2 rounded-md cursor-pointer flex items-center gap-2 ${activeItem === 'Dashboard' ? 'bg-gray-700' : ''}`}
+          className={`hover:bg-gray-700 hover:text-gray-300 p-2 rounded-md cursor-pointer flex items-center gap-2 ${activeItem === 'Dashboard' ? 'bg-gray-700 text-gray-300' : ''}`}
           onClick={() => handleItemClick('/shop-dashboard')}
         >
           <LayoutDashboard /> Dashboard
         </li>
         <li className="relative">
           <div 
-            className={`hover:bg-gray-700 p-2 rounded-md cursor-pointer flex items-center justify-between ${activeItem === 'Ecommerce' ? 'bg-gray-700' : ''}`}
+            className={`hover:bg-gray-700 hover:text-gray-300 p-2 rounded-md cursor-pointer flex items-center justify-between ${activeItem === 'Ecommerce' ? 'bg-gray-700 text-gray-300' : ''}`}
             onClick={toggleEcommerce}
           >
             <div className="flex items-center gap-2">
@@ -88,19 +88,19 @@ const Sidebar = ({ isOpen }: SidebarProps) => {
                 className="ml-4 mt-2 space-y-2"
               >
                 <li 
-                  className={`hover:bg-gray-700 p-2 rounded-md cursor-pointer flex items-center gap-2 ${activeItem === 'Products' ? 'bg-gray-700' : ''}`}
+                  className={`hover:bg-gray-700 p-2 hover:text-gray-300 rounded-md cursor-pointer flex items-center gap-2 ${activeItem === 'Products' ? 'bg-gray-700 text-gray-300' : ''}`}
                   onClick={() => handleItemClick('/ecommerce/products')}
                 >
                   Products
                 </li>
                 <li 
-                  className={`hover:bg-gray-700 p-2 rounded-md cursor-pointer flex items-center gap-2 ${activeItem === 'Customers' ? 'bg-gray-700' : ''}`}
+                  className={`hover:bg-gray-700 p-2 hover:text-gray-300 rounded-md cursor-pointer flex items-center gap-2 ${activeItem === 'Customers' ? 'bg-gray-700 text-gray-300' : ''}`}
                   onClick={() => handleItemClick('/ecommerce/customers')}
                 >
                   Customers
                 </li>
                 <li 
-                  className={`hover:bg-gray-700 p-2 rounded-md cursor-pointer flex items-center gap-2 ${activeItem === 'Orders' ? 'bg-gray-700' : ''}`}
+                  className={`hover:bg-gray-700 p-2 hover:text-gray-300 rounded-md cursor-pointer flex items-center gap-2 ${activeItem === 'Orders' ? 'bg-gray-700 text-gray-300' : ''}`}
                   onClick={() => handleItemClick('/ecommerce/orders')}
                 >
                   Orders
@@ -110,7 +110,7 @@ const Sidebar = ({ isOpen }: SidebarProps) => {
           </AnimatePresence>
         </li>
         <li 
-          className={`hover:bg-gray-700 p-2 rounded-md cursor-pointer flex items-center gap-2 ${activeItem === 'Calendar' ? 'bg-gray-700' : ''}`}
+          className={`hover:bg-gray-700 p-2 hover:text-gray-300 rounded-md cursor-pointer flex items-center gap-2 ${activeItem === 'Calendar' ? 'bg-gray-700 text-gray-300' : ''}`}
           onClick={() => handleItemClick('/settings')}
         >
           <Settings /> Settings

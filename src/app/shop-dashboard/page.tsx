@@ -1,41 +1,65 @@
 "use client"
 import React from 'react';
 import Layout from '@/components/DashboardLayout';
-import DashboardOverviewCard from '@/components/dashboard/DashboardOverviewCard';
 import GrowthLineChart from '@/components/dashboard/GrowthLineChart';
 import RevenueBarChart from '@/components/dashboard/RevenueBarChart';
 import { Customer, Order } from '@/components/dashboard/types';
-import TopCustomers from '@/components/dashboard/TopCustomers';
-import TopProducts from '@/components/dashboard/TopProducts';
 
 const DashboardPage: React.FC = () => {
   const totalOrders: number = 20;
   const totalRevenue: number = orders.reduce((acc, order) => acc + order.price, 0);
   const averageOrderValue: number = totalRevenue / totalOrders;
-  const topCustomers = customers.slice(0, 5); // Top 5 customers
-  const topProducts = orders.slice(0, 5); // Top 5 products
+  const topCustomers = customers.slice(0, 5);
+  const topProducts = orders.slice(0, 5);
 
   return (
     <Layout>
       <div className="p-6 space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <DashboardOverviewCard title="Total Orders" value={totalOrders} />
-          <DashboardOverviewCard title="Total Revenue" value={`$${totalRevenue.toFixed(2)}`} />
-          <DashboardOverviewCard title="Average Order Value" value={`$${averageOrderValue.toFixed(2)}`} />
+          <div className="bg-[#EFF0A3] p-4 rounded-xl shadow-md">
+            <h3 className="text-gray-800 text-sm">Total Orders</h3>
+            <p className="text-[#212121] text-2xl font-bold">20</p>
+          </div>
+          <div className="bg-[#D8DFD9] p-4 rounded-xl shadow-md">
+            <h3 className="text-gray-800 text-sm">Total Revenue</h3>
+            <p className="text-[#212121] text-2xl font-bold">${totalRevenue}</p>
+          </div>
+          <div className="bg-[#CFDECA] p-4 rounded-xl shadow-md">
+            <h3 className="text-gray-800 text-sm">Average Order Value</h3>
+            <p className="text-[#212121] text-2xl font-bold">${averageOrderValue}</p>
+          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-          <div className="bg-[#1A1D1F] p-4 rounded-xl">
+          <div className="bg-[#D8DFD9] p-4 rounded-xl">
             <h3 className="text-gray-400 text-sm mb-4">Sales Growth</h3>
             <GrowthLineChart />
           </div>
-          <div className="bg-[#1A1D1F] p-4 rounded-xl">
+          <div className="bg-[#D8DFD9] p-4 rounded-xl">
             <h3 className="text-gray-400 text-sm mb-4">Revenue by Product</h3>
             <RevenueBarChart />
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <TopCustomers customers={topCustomers} />
-          <TopProducts products={topProducts} />
+          <div className="bg-[#CFDECA] p-4 rounded-xl shadow-md">
+            <h3 className="text-gray-800 text-lg font-bold mb-4">Top Customers</h3>
+            <ul className="space-y-2">
+              {topCustomers.map((customer) => (
+                <li key={customer.id} className="text-[#212121]">
+                  {customer.name} - {customer.email}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="bg-[#D8DFD9] p-4 rounded-xl shadow-md">
+            <h3 className="text-gray-800 text-lg font-bold mb-4">Top Products</h3>
+            <ul className="space-y-2">
+              {topProducts.map((product) => (
+                <li key={product.id} className="text-[#212121]">
+                  {product.productTitle} - ${product.price.toFixed(2)}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </Layout>
