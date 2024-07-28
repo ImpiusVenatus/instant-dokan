@@ -2,13 +2,16 @@ import React from 'react';
 
 const SpecialOffers = () => {
   const offers = [
-    { id: 1, title: '50% off on Electronics', description: 'Get the best deals on electronics', image: '/sadman.jpeg' },
-    { id: 2, title: 'Buy 1 Get 1 Free', description: 'Exclusive offer on fashion products', image: '/sadman.jpeg' },
+    { id: 1, title: '50% off on Sports', description: 'Get the best deals on sports shoes', image: '/shop/sample1.png' },
+    { id: 2, title: 'Buy 1 Get 1 Free', description: 'Exclusive offer on sports shoes', image: '/shop/sample2.png' },
   ];
 
   return (
     <section className="py-12">
-      <h2 className="text-3xl text-center mb-8">Special Offers</h2>
+      <div className="flex items-center mb-8">
+        <span className="block w-10 h-1 bg-teal-500 mr-4"></span>
+        <h2 className="text-3xl font-semibold">Special Offers</h2>
+      </div>
       <div className="grid grid-cols-2 gap-6">
         {offers.map(offer => (
           <div key={offer.id} className="border p-4 rounded-md">

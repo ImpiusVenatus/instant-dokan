@@ -2,14 +2,17 @@ import React from 'react';
 
 const Categories = () => {
   const categories = [
-    { id: 1, name: 'Electronics', image: '/sadman.jpeg' },
-    { id: 2, name: 'Fashion', image: '/sadman.jpeg' },
-    { id: 3, name: 'Home & Kitchen', image: '/sadman.jpeg' },
+    { id: 1, name: 'Sports', image: '/shop/sports.png' },
+    { id: 2, name: 'Formal', image: '/shop/formal.png' },
+    { id: 3, name: 'Casual', image: '/shop/casual.png' },
   ];
 
   return (
-    <section className="py-12">
-      <h2 className="text-3xl text-center mb-8">Categories</h2>
+    <section className="py-12 cursor-pointer">
+      <div className="flex items-center mb-8">
+        <span className="block w-10 h-1 bg-teal-500 mr-4"></span>
+        <h2 className="text-3xl font-semibold">Categories</h2>
+      </div>
       <div className="grid grid-cols-3 gap-6">
         {categories.map(category => (
           <div key={category.id} className="border p-4 rounded-md text-center">

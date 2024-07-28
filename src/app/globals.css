@@ -145,3 +145,10 @@
   border-radius: 10px; /* Round the corners of the thumb */
   border: 3px solid #2d3748; /* Padding around the thumb */
 }
+
+@font-face {
+  font-family: "Metropolitano-Medium";
+  src: url("/fonts/Metropolitano-Medium.ttf") format("truetype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
