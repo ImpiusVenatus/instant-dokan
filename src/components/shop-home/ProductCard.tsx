@@ -23,7 +23,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <ShoppingCart />
         </button>
         <button className="ml-2 px-4 py-2 bg-teal-500 text-white rounded-md transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
-          <Menu />
+          <a href='/product'><Menu /></a>
         </button>
       </div>
     </div>

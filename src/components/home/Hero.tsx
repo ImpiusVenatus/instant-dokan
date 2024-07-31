@@ -65,7 +65,7 @@ export function Hero() {
         className="relative flex flex-col gap-4 items-center justify-center px-4"
       >
         <div className="max-w-[80rem] text-3xl md:text-7xl font-bold dark:text-white text-center">
-          Transform you business using Instant-Dokan
+          Transform your business using Instant-Dokan
         </div>
         <div className="font-light text-center text-base md:text-xl text-gray-500 dark:text-neutral-200 py-4">
           Automate Website Generation, Engage Audiences, Upload Products and Boost Your Sales

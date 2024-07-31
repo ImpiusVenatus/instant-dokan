@@ -42,9 +42,9 @@ const ProductDetails = ({ product }: { product: any }) => {
       </div>
       <div className="flex space-x-4">
         <motion.button
-          className="flex-1 px-4 py-2 bg-orange-500 text-white rounded-md focus:ring-2 focus:ring-orange-400 transition"
-          whileHover={{ backgroundColor: '#fb923c' }}
-          whileTap={{ backgroundColor: '#f97316' }}
+          className="flex-1 px-4 py-2 bg-teal-500 text-white rounded-md focus:ring-2 focus:ring-teal-400 transition"
+          whileHover={{ backgroundColor: '#0c7b6f' }}
+          whileTap={{ backgroundColor: '#0c7b7f' }}
         >
           Buy One Click
         </motion.button>
