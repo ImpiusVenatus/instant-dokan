@@ -17,8 +17,15 @@ export const globalSlice = createSlice({
     setIsSidebarCollapsed: (state, action: PayloadAction<boolean>) => {
       state.isSidebarCollapsed = action.payload;
     },
-    setIsDarkMode: (state, action: PayloadAction<boolean>) => {
+    setIsDarkMode(state, action: PayloadAction<boolean>) {
       state.isDarkMode = action.payload;
+      if (typeof document !== "undefined") {
+        if (action.payload) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }
     },
   },
 });
